@@ -1,0 +1,27 @@
+# Core audio
+pyaudio==0.2.14
+
+# Voice Activity Detection
+silero-vad==5.1.2
+# torch CPU-only — smaller download (~200MB). For CUDA remove the +cpu suffix.
+torch==2.2.2+cpu --index-url https://download.pytorch.org/whl/cpu
+
+# Speech-to-text (both wake word + commands)
+faster-whisper==1.0.3
+ctranslate2==4.3.1
+
+# Text-to-speech (fully offline, uses Windows SAPI5)
+pyttsx3>=2.90
+
+# System tray
+pystray==0.19.5
+Pillow==10.3.0
+
+# Windows registry + .lnk shortcut parsing
+pywin32==306
+
+# Config serialisation
+tomli-w==1.0.0
+
+# Fuzzy program name matching
+rapidfuzz==3.9.0
