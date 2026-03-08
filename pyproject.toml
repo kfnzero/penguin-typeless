@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "penguin-typeless"
+version = "0.1.0"
+description = "Offline Chinese/English voice assistant for Windows"
+requires-python = ">=3.11"
+dependencies = [
+    "pyaudio==0.2.14",
+    "torch>=2.6.0",
+    "silero-vad==5.1.2",
+    "faster-whisper>=1.1.0",
+    "pyttsx3>=2.90",
+    "pystray==0.19.5",
+    "Pillow==10.3.0",
+    "pywin32==306; sys_platform == 'win32'",
+    "tomli-w==1.0.0",
+    "rapidfuzz==3.9.0",
+]
+
+[project.scripts]
+penguin = "penguin.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["penguin*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

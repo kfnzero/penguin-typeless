@@ -1,0 +1,30 @@
+# PyTorch CPU-only wheel (Python 3.13 requires torch >= 2.6.0)
+# --extra-index-url must come first so pip knows where to find +cpu wheels
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Core audio
+pyaudio==0.2.14
+
+# Voice Activity Detection (uses torch)
+silero-vad==5.1.2
+torch==2.6.0+cpu
+
+# Speech-to-text (both wake word + commands)
+faster-whisper==1.1.1
+ctranslate2==4.4.0
+
+# Text-to-speech (fully offline, uses Windows SAPI5)
+pyttsx3>=2.90
+
+# System tray
+pystray==0.19.5
+Pillow==10.3.0
+
+# Windows registry + .lnk shortcut parsing
+pywin32==306
+
+# Config serialisation
+tomli-w==1.0.0
+
+# Fuzzy program name matching
+rapidfuzz==3.9.0
